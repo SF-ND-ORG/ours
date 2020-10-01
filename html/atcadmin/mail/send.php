@@ -32,7 +32,7 @@ try {
     $mail->SMTPAuth = true;                      // 允许 SMTP 认证
     //$mail->Username = 'suours@aliyun.com';                // SMTP 用户名  即邮箱的用户名
 	$mail->Username = '3253541727@qq.com';
-    //$mail->Password = 'suours0075';             // SMTP 密码  部分邮箱是授权码(例如163邮箱)
+    //$mail->Password = '';             // SMTP 密码  部分邮箱是授权码(例如163邮箱)
 	$mail->Password = '';
     $mail->SMTPSecure = 'ssl';                    // 允许 TLS 或者ssl协议
     $mail->Port = 465;                            // 服务器端口 25 或者465 具体要看邮箱服务器支持
