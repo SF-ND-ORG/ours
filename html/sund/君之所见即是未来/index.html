@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vol.2</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</head>
+
+<body>
+    <h1>Vol.2</h1>
+    <h1 id="ct"></h1>
+    <h1>
+        恭喜你来到第二关！
+    </h1>
+    <hr/>
+    <h1>转眼竟然就是梦启了！</h1>
+    <a href="https://imgchr.com/i/3LsCZt"><img src="https://s2.ax1x.com/2020/03/06/3LsCZt.md.jpg" alt="3LsCZt.md.jpg" border="0"></a>
+<a href="https://imgchr.com/i/3LsSsA"><img src="https://s2.ax1x.com/2020/03/06/3LsSsA.md.jpg" alt="3LsSsA.md.jpg" border="0"></a>
+<a href="https://imgchr.com/i/3LsPdP"><img src="https://s2.ax1x.com/2020/03/06/3LsPdP.md.jpg" alt="3LsPdP.md.jpg" border="0"></a>
+<a href="https://imgchr.com/i/3LspqI"><img src="https://s2.ax1x.com/2020/03/06/3LspqI.md.jpg" alt="3LspqI.md.jpg" border="0"></a>
+<h1>嘿！那首歌叫什么名？</h1>
+
+    <script>
+        var ct;
+        function upload(){
+            url="http://"+window.location.host+'/sund/api.php?now='+window.location.pathname+"&ip="+returnCitySN["cip"];
+            axios.get(url)
+            .then(function (response) {
+                console.log(response);
+                ct=response['data'];
+                document.getElementById("ct").innerHTML="包括你，这里已经有"+ct+"人来过";
+            })
+        }
+        upload();
+    </script>
+</body>

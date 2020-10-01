@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vol.3</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</head>
+
+<body>
+    <h1>Vol.3</h1>
+    <h1 id="ct"></h1>
+    <h1>
+        恭喜你来到第三关！
+    </h1>
+    <hr/>
+    <h1>这个问题可能会需要一点点合作哦！</h1>
+    <img width="100%" src="https://s2.ax1x.com/2020/03/06/3LylnA.jpg" alt="3LylnA.jpg" border="0" />
+    <h1>网络部最年轻的人的生日。</h1>
+
+    <script>
+        var ct;
+        function upload(){
+            url="http://"+window.location.host+'/sund/api.php?now='+window.location.pathname+"&ip="+returnCitySN["cip"];
+            axios.get(url)
+            .then(function (response) {
+                console.log(response);
+                ct=response['data'];
+                document.getElementById("ct").innerHTML="包括你，这里已经有"+ct+"人来过";
+            })
+        }
+        upload();
+    </script>
+</body>

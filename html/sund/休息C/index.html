@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vol.5</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</head>
+
+<body>
+    <h1>Vol.5</h1>
+    <h1 id="ct"></h1>
+    <h1>
+        恭喜你来到第五关！就要接近胜利了哦！
+    </h1>
+    <hr/>
+    <h1>作为师附人，做题当然也不能怕怕！</h1>
+    <img src="https://s2.ax1x.com/2020/03/06/3LfSEj.png" alt="3LfSEj.png" border="0" />
+    <h1>只需要第三问的答案就好咯！</h1>
+    
+
+    <script>
+        var ct;
+        function upload(){
+            url="http://"+window.location.host+'/sund/api.php?now='+window.location.pathname+"&ip="+returnCitySN["cip"];
+            axios.get(url)
+            .then(function (response) {
+                console.log(response);
+                ct=response['data'];
+                document.getElementById("ct").innerHTML="包括你，这里已经有"+ct+"人来过";
+            })
+        }
+        upload();
+    </script>
+</body>

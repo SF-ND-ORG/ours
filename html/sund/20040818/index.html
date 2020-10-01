@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vol.4</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</head>
+
+<body>
+    <h1>Vol.4</h1>
+    <h1 id="ct"></h1>
+    <h1>
+        恭喜你来到第四关！
+    </h1>
+    <hr/>
+    <h1>很好，我们即将进入下一个阶段了：）需要有8人到达这里之后才会开启</h1>
+    <h1>下面我们同时给出两个问题</h1><hr/>
+    <h1>1：晋人倚木而叹曰：自以心为形役，何不归田而释之？（打一二字现代汉语用词）</h1>
+    <h1>2:付家国把你静止的放在了一个地面绝对光滑的房间中央，
+        并告诉你你只要相对于房间向右转90度后保持静止，
+        你就可以不上直播课。你身上有一个乒乓球
+        ，除此再无工具。试问下列操作，那个可以让你远离钉钉：
+        A，将乒乓球用右手向你的前方扔出。
+        B将乒乓球用左手向你的前方扔出。
+        C，向你的的前方伸缩你的右手一定次数 
+        D，向你的前方伸缩你的左手一定次数
+    </h1>
+    <h1>（你可以猜一猜这两个问题是谁出的。</h1>
+    <hr/>
+    <h1>你需要组合两个问题的答案，例如第一个答案是22，第二个答案是33，那么答案就是2233.
+    </h1>
+
+    <script>
+        var ct;
+        function upload(){
+            url="http://"+window.location.host+'/sund/api.php?now='+window.location.pathname+"&ip="+returnCitySN["cip"];
+            axios.get(url)
+            .then(function (response) {
+                console.log(response);
+                ct=response['data'];
+                document.getElementById("ct").innerHTML="包括你，这里已经有"+ct+"人来过";
+            })
+        }
+        upload();
+    </script>
+</body>

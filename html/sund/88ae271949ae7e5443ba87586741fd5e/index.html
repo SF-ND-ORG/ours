@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vol.end</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+</head>
+
+<body>
+    <h1>Vol.end</h1>
+    <h1 id="ct"></h1>
+    <h1>
+        是的。这个问题的答案...曾是我们梦想的地方，也是梦开始的地方。非常幸运，我们都能来到这里，我们能在一起，我们组成了网络部。现在，把这个页面截图发到群里吧！！！
+    </h1>
+    
+
+    <script>
+        var ct;
+        function upload(){
+            url="http://"+window.location.host+'/sund/api.php?now='+window.location.pathname+"&ip="+returnCitySN["cip"];
+            axios.get(url)
+            .then(function (response) {
+                console.log(response);
+                ct=response['data'];
+                document.getElementById("ct").innerHTML="包括你，这里已经有"+ct+"人来过";
+            })
+        }
+        upload();
+    </script>
+</body>

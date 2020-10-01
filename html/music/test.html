@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+
+<script>
+
+var list;
+
+function get_new(tmpid)
+{
+  var xmlhttp; xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function()
+    {
+      if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+        list=JSON.parse(xmlhttp.responseText);
+        document.getElementById("title0").innerHTML=list['title'];
+        document.getElementById("auth0").innerHTML=list['auth'];
+        document.getElementById("img0").src=list['img'];
+        document.getElementById("audio0").src=list['src'];
+        document.getElementById("audio0").play();
+      }
+    }
+    xmlhttp.open("GET","./get_new.php",true);
+    xmlhttp.send();
+}
+
+function go()
+{ 
+    document.getElementById("audio0").play();
+}
+
+t1=window.setTimeout("get_new();",1000);
+
+</script>
+</head>
+<body>
+
+
+
+<audio id="audio0" src="" controls="controls" onended="get_new();">
+Your browser does not support the audio element.
+</audio>
+<h1 id="title0"></h1>
+<h1 id="auth0"></h1>
+<img id="img0" src="">
+
+<audio id="audio1" src="http://url.cn/5SzMfC3" controls="controls"></audio>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+CREATE TABLE tmlt(
+id INT AUTO_INCREMENT,
+from_name CHAR(100),
+to_name CHAR(100),
+from_qq CHAR(20),
+from_tel CHAR(20),
+from_mail CHAR(30),
+to_qq CHAR(20),
+to_tel CHAR(20),
+to_mail CHAR(30),
+status INT,
+sendt DATETIME,
+recvt DATETIME,
+atc LONGTEXT,
+PRIMARY KEY(id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

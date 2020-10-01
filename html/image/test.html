@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SU-Ours</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  @font-face {
+        font-family: fz;
+        src: url(../fz.ttf)
+    }
+    .btn:hover{
+        background-color: #39e;
+        box-shadow: 0 0 5px 3px #ddd;
+    }
+    .btn{
+        outline:none;
+        border:none;
+        transition:all 0.5s ease-in-out;
+    }
+
+    .navbar-brand:hover{
+      transition:all 0.5s ease-in-out;
+      text-shadow: 0px 0px 5px  #fee;
+    }
+
+    [aria-expanded=true]{
+      border-color: #f99 !important;
+    }
+
+    body{
+        font-family: fz;
+    }
+
+    img:hover{
+        box-shadow: 0 0 5px 3px #bbb;
+    }
+    img{
+        transition:all 0.3s ease-in-out
+    }
+</style>
+
+<body>
+
+<nav class="navbar bg-danger navbar-dark">
+  <a class="navbar-brand" href="#">
+      <h3 style="display: inline">Ours</h3>
+      <h6 style="display: inline">&nbsp&nbsp&nbsp&nbsp——当时只道是寻常</h6>
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="outline-color:lightcoral">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">景</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">文</a>
+      </li>   
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class='container-fluid'>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+          <a href="https://cdn-usa.skypixel.com/uploads/usa_files/photo/image/671daed4-895c-4672-a4d7-54ba0702fe3f.jpg@!1920" target="_blank">
+              <img class="card-img-top" src="https://cdn-usa.skypixel.com/uploads/usa_files/photo/image/671daed4-895c-4672-a4d7-54ba0702fe3f.jpg@!1920" alt="Card image">
+          </a>
+          <div class="card-body">
+              <h4 class="card-title">John Doe</h4>
+              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+              <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <a href="https://cdn-usa.skypixel.com/uploads/usa_files/photo/image/47f7e356-4546-4db2-b275-a175d7d3d744.jpg@!1920" target="_blank">
+            <img class="card-img-top" src="https://cdn-usa.skypixel.com/uploads/usa_files/photo/image/47f7e356-4546-4db2-b275-a175d7d3d744.jpg@!1920" alt="Card image">
+        </a>
+        <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
