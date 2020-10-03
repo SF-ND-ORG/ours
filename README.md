@@ -4,9 +4,9 @@
 
 ## 目录结构
 
-* `html`: `Ours`网站
+* [html](https://github.com/SF-ND/ours/tree/master/html): `Ours`网站
 
-* `api`: `Ours`提供的`API`
+* [api](https://github.com/SF-ND/ours/tree/master/api): `Ours`提供的`API`
 
 ## Intro
 
